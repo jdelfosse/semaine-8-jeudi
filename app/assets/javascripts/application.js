@@ -14,3 +14,58 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+console.log("test");
+
+$(document).ready(function() {
+ $( "#categories").find("ul").hide();
+/*  $('.tablinks').click(function ()
+  {
+    $('.card').eq(0).show();
+  }); */
+//  $(".container").css("background-color","red");
+
+  i = 0;
+  $('.tablinks').eq(0).click(function () {
+    if (i === 0) {
+      $( "#categories" ).find( "ul" ).eq(0).show();
+      i = 1;
+    }
+    else if(i === 1) {
+      $( "#categories" ).find("ul").eq(0).hide();
+      i = 0;
+    }
+  //    $( "#categories" ).show();
+  });
+
+  j = 0;
+  $('.tablinks').eq(1).click(function () {
+    if (j === 0) {
+      $( "#categories" ).find( "ul" ).eq(1).show();
+    j = 1;
+    }
+    else if(j === 1) {
+      $( "#categories" ).find( "ul" ).eq(1).hide();
+    j = 0;
+    }
+  //    $( "#categories" ).show();
+  });
+
+  x = 0;
+  $('.tablinks').eq(2).click(function () {
+    if (x === 0) {
+      $( "#categories" ).find( "ul" ).eq(2).show();
+      x = 1;
+    }
+    else if(x === 1) {
+      $( "#categories" ).find( "ul" ).eq(2).hide();
+      x = 0;
+    }
+  //    $( "#categories" ).show();
+  });
+
+
+});

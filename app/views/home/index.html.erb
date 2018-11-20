@@ -1,9 +1,9 @@
 <h1 class="text-center mb-4">Welcome to my todolist app</h1>
 <%= render 'layouts/task_form'  %>
 <div class="container">
-  <ul>
+  <ul id="categories">
   <% @categories.each do  |category|%>
-  <li><%= category.title  %></li>
+  <li><button class="tablinks"><%= category.title  %></button></li>
   <div class="card">
     <ul>
       <% category.tasks.each do |task|  %>
@@ -19,6 +19,7 @@
   <% end %>
   </ul>
 </div>
+<br />
 
 <div class="container">
   <div class="row">
