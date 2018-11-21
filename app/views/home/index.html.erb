@@ -3,7 +3,7 @@
 <div class="container">
   <ul id="categories">
   <% @categories.each do  |category|%>
-  <li><button class="tablinks"><%= category.title  %></button></li>
+  <li class="tablinks"><%= category.title  %></li>
   <div class="card">
     <ul>
       <% category.tasks.each do |task|  %>
