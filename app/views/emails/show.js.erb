@@ -1,0 +1,7 @@
+$(document).ready(function() {
+//  var stockEmail = $("<%= j (render "email") %>");
+//  $("#object-" + <%= @email.id %>).append(stockEmail);
+  $("#body-" + <%= @email.id %>).show();
+  $("#object-" + <%= @email.id %>).css("font-size", "30px");
+  $("#destroy_email-" + <%= @email.id %>).show();
+});

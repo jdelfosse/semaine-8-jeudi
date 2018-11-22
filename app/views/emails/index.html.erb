@@ -1,0 +1,15 @@
+<h1>Voici vos emails</h1>
+<br />
+<% @emails.each do |email|%>
+<div class="email" id="email-<%= email.id.to_s %>">
+  <div class="object" id="object-<%= email.id.to_s %>">
+    <%= link_to email.object, "emails/#{email.id}", remote: true, action: :show %>
+  </div>
+<div class="body" id="body-<%= email.id.to_s %>">
+  <%= email.body %>
+</div>
+<div class="destroy_email" id="destroy_email-<%= email.id.to_s %>">
+  <%= link_to "Supprimer l'email", "emails/#{email.id}", remote: true, method: :delete %>
+</div>
+  <br />
+<% end %>
