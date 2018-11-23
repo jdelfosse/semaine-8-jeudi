@@ -2,9 +2,11 @@
 <%= render 'layouts/task_form'  %>
 <div class="container">
   <ul id="categories">
+  <% index = 0 %>
   <% @categories.each do  |category|%>
   <li class="tablinks"><%= category.title  %></li>
-  <div class="card">
+  <% puts index %>
+  <div class="card" id="card-<%= index.to_s %>">
     <ul>
       <% category.tasks.each do |task|  %>
       <li>
@@ -16,6 +18,7 @@
       <% end %>
     </ul>
   </div>
+  <% index += 1 %>
   <% end %>
   </ul>
 </div>
